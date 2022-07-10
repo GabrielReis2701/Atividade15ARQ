@@ -1,6 +1,8 @@
 #include <iostream>
 #include <stdio.h>
+#include <conio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <math.h>
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
@@ -16,7 +18,7 @@ int complementoD2(int valor){
 }
 void octal(int nf){
 	printf("\n\n|----------------------------------------------------------------------------------------------|");
-	printf("\n|                                        OCTAL                                                 |");
+	printf("\n|                                          OCTAL                                               |");
 	printf("\n|----------------------------------------------------------------------------------------------|\n");
 	int aa=nf;
 	int octaDec[20],octa[20],comp[20],um[20],compF[20];
@@ -42,7 +44,7 @@ void octal(int nf){
 		octaDec[j]=nf;
 	}
 	//Exibir o octal
-		printf("                                          ");
+		printf("                                             ");
 		for(int z=j;z>=0;z--){
 			octa[tam]=octaDec[z]; //inverte a ordem do numero octal
 			printf("%d",octa[tam]); //exibe a ordem certa do numero octal
@@ -72,7 +74,7 @@ char vhexa(int nf){
 }
 void hexaDecimal(int nf){
 	printf("\n\n|----------------------------------------------------------------------------------------------|");
-	printf("\n|                                        HEXADECIMAL                                           |");
+	printf("\n|                                       HEXADECIMAL                                            |");
 	printf("\n|----------------------------------------------------------------------------------------------|\n");
 	 int  i, j;
 	      int  quociente;	
@@ -94,7 +96,7 @@ void hexaDecimal(int nf){
 		  resto[ i ] = quociente;
 		  
 
- 	      printf ( "\n                                               ");
+ 	      printf ( "\n                                            ");
  	      for (  ; i >= 0; i-- ) 
 
 		     if ( resto[ i ] >= 10 )			 
@@ -118,7 +120,7 @@ void hexaDecimal(int nf){
 
 void binario(int nf){
 	printf("\n\n|----------------------------------------------------------------------------------------------|");
-	printf("\n|                                        BINARIO                                               |");
+	printf("\n|                                         BINARIO                                              |");
 	printf("\n|----------------------------------------------------------------------------------------------|\n");
 	int aa=nf;
 	int binDec[20],bin[20],comp[20],um[20],compF[20],Dec[20],dec=0,decF=0,expo[20];
@@ -182,7 +184,7 @@ void binario(int nf){
 		comp[i]= aux2;
 	}
 	printf("\n\n|----------------------------------------------------------------------------------------------|");
-	printf("\n|                                COMPLEMENTO DE 2                                              |");
+	printf("\n|                                    COMPLEMENTO DE 2                                          |");
 	printf("\n|----------------------------------------------------------------------------------------------|\n");
 	printf("                                          ");
 	for(int i=0;i<tam;i++){
@@ -237,18 +239,25 @@ int main() {
     	printf("\n2- Fechar o Programa");
     	printf("\nOpcao: ");
     	scanf("%d",&opc);
+    	printf("\n\nPrecione ENTER para continuar\n\n");
+    	getch();
     	switch(opc){
     		case 1:
     			printf("\nDigite um numero: ");
     			scanf("%d",&nf);
     			aa=nf;
+    			system("cls");
     			binario(nf);
     			printf("\nCaracter digitado: %c , Codigo Decimal ASCII: %d", aa, aa); //exibe a letra correspondente do teclado e o codigo decimal
+    			printf("\nPrecione ENTER para continuar\n\n");
+    			getch();
     			break;
     		case 2:
     			break;
     		default:
     			printf("\n\nPor favor Informe uma Opcao valida!!!!\n\n");
+    			printf("\n\nPrecione ENTER para continuar\n\n");
+    			getch();
     			
 		}
     	
